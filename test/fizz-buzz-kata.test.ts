@@ -1,4 +1,4 @@
-import FizzBuz from './../src/fizzBuzz'
+import FizzBuz from '../src/fizzBuzz'
 
 describe('FizzBuz', () => {
     const fizzBuzz = new FizzBuz()
@@ -34,7 +34,6 @@ describe('FizzBuz', () => {
 describe('FizzBuzAll', () => {
     const fizzBuzz = new FizzBuz()
     it('should be and array and comprobate', () => {
-        console.log(fizzBuzz.fizzBuzzAll())
         expect(fizzBuzz.fizzBuzzAll()).toHaveLength(100);
         expect(fizzBuzz.fizzBuzzAll()[2]).toEqual(fizzBuzz.FIZZ);
         expect(fizzBuzz.fizzBuzzAll()[4]).toEqual(fizzBuzz.BUZZ);
