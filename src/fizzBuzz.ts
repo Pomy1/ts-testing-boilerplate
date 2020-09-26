@@ -9,15 +9,15 @@ export default class FizzBuzz {
     fizzBuzz(num: number) : string {
 
         let response: string = num.toString();
-        if(this.isDivisibleByThree(num) || this.containsThree(num))response = this.FIZZ
-        if(this.isDivisibleByFive(num) || this.containsFive(num))response = this.BUZZ
-        if(this.isDivisibleByThreeAndFive(num))response = this.FIZZBUZZ
+        if(this.isDivisibleByThree(num) || this.containsThree(num)) response = this.FIZZ
+        if(this.isDivisibleByFive(num) || this.containsFive(num)) response = this.BUZZ
+        if(this.isDivisibleByThreeAndFive(num)) response = this.FIZZBUZZ
         if(num>100) response = this.GREATERTHAN100
         return response
     }
 
-    iteration(numList: number[]) : string[] {
-        return numList.map(num => this.fizzBuzz(num))
+    fizzBuzzAll() : string[] {
+        return Array(100).fill(1).map((num,index) => this.fizzBuzz(index+1))
     }
 
     isDivisibleByThreeAndFive(numToCheck: number): boolean {

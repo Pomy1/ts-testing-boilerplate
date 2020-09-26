@@ -27,8 +27,16 @@ describe('FizzBuz', () => {
         expect(fizzBuzz.fizzBuzz(15)).toEqual(fizzBuzz.FIZZBUZZ);
     })
 
-    it('should be ', () => {
-        expect(fizzBuzz.iteration([3,5,15])).toEqual([fizzBuzz.FIZZ,fizzBuzz.BUZZ,fizzBuzz.FIZZBUZZ]);
-    })
+    
 
+})
+
+describe('FizzBuzAll', () => {
+    const fizzBuzz = new FizzBuz()
+    it('should be and array and comprobate', () => {
+        console.log(fizzBuzz.fizzBuzzAll())
+        expect(fizzBuzz.fizzBuzzAll()).toHaveLength(100);
+        expect(fizzBuzz.fizzBuzzAll()[2]).toEqual(fizzBuzz.FIZZ);
+        expect(fizzBuzz.fizzBuzzAll()[4]).toEqual(fizzBuzz.BUZZ);
+    })
 })
