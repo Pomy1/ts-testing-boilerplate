@@ -1,0 +1,28 @@
+import FizzBuz from '../src/fizzBuzz'
+
+describe('FizzBuz', () => {
+    const fizzBuzz = new FizzBuz()
+
+    it('should be Fizz if number is divisible of 3', () => {
+        expect(fizzBuzz.fizzBuzz(6)).toEqual(fizzBuzz.FIZZ);
+    })
+
+    it('should be Fizz if number contains 3', () => {
+        expect(fizzBuzz.fizzBuzz(13)).toEqual(fizzBuzz.FIZZ);
+        expect(fizzBuzz.fizzBuzz(93)).toEqual(fizzBuzz.FIZZ);
+    })
+
+    it('should be Buzz if number is divisible of 5', () => {
+        expect(fizzBuzz.fizzBuzz(5)).toEqual(fizzBuzz.BUZZ);
+        expect(fizzBuzz.fizzBuzz(85)).toEqual(fizzBuzz.BUZZ);
+    })
+
+    it('should be FizzBuzz if number is divisible of 3 and 5', () => {
+        expect(fizzBuzz.fizzBuzz(15)).toEqual(fizzBuzz.FIZZBUZZ);
+    })
+
+    it('should be less than 100', () => {
+        expect(fizzBuzz.fizzBuzz(200)).toEqual('No puede ser mayor que 100');
+    })
+
+})
