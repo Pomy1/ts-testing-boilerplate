@@ -1,10 +1,18 @@
-import FizzBuz from '../src/fizzBuzz'
+import FizzBuz from './../src/fizzBuzz'
 
 describe('FizzBuz', () => {
     const fizzBuzz = new FizzBuz()
 
     it('should be Fizz if number is divisible of 3', () => {
         expect(fizzBuzz.fizzBuzz(6)).toEqual(fizzBuzz.FIZZ);
+    })
+
+    it('should be 1 if is one', () => {
+        expect(fizzBuzz.fizzBuzz(1)).toEqual("1");
+    })
+
+    it('should be 1 if is one', () => {
+        expect(fizzBuzz.fizzBuzz(7)).toEqual("7");
     })
 
     it('should be Fizz if number contains 3', () => {
@@ -21,8 +29,8 @@ describe('FizzBuz', () => {
         expect(fizzBuzz.fizzBuzz(15)).toEqual(fizzBuzz.FIZZBUZZ);
     })
 
-    it('should be less than 100', () => {
-        expect(fizzBuzz.fizzBuzz(200)).toEqual('No puede ser mayor que 100');
+    it('should be ', () => {
+        expect(fizzBuzz.iteration([3,5,15])).toEqual([fizzBuzz.FIZZ,fizzBuzz.BUZZ,fizzBuzz.FIZZBUZZ]);
     })
 
 })
